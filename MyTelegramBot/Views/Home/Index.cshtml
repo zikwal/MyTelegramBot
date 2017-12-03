@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MyTelegramBot.BotInfo>
+@{
+    //ViewData["Title"] = "Список смартфонов";
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+
+<h3>Боты</h3>
+<a href="~/Home/Create/">Добавить</a>
+<table class="table">
+    <tr>
+        <td>Название</td>
+        <td>Токен</td>
+        <td>Дата добавления</td>
+        <td></td>
+    </tr>
+    @foreach (var phone in Model)
+    {
+        <tr>
+            <td>@phone.Name</td>
+            <td>@phone.Token</td>
+            <td>@phone.Timestamp.ToString()</td>
+            <td><a href="~/Home/Buy/@phone.Id">Изменить</a></td>
+        </tr>
+    }
+</table>
+

@@ -19,10 +19,10 @@ namespace MyTelegramBot
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public int ChatId { get; set; }
+        public int? ChatId { get; set; }
         public string Token { get; set; }
 
-        public int OwnerChatId { get; set; }
+        public int? OwnerChatId { get; set; }
         public DateTime? Timestamp { get; set; }
 
         public ICollection<AttachmentTelegram> AttachmentTelegram { get; set; }

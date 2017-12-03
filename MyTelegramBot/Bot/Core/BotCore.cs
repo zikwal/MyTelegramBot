@@ -276,7 +276,7 @@ namespace MyTelegramBot.Bot
 
                     if (bot != null)
                     {
-                        this.BotOwner = bot.OwnerChatId;
+                        this.BotOwner =Convert.ToInt32(bot.OwnerChatId);
                         return bot;
                     }
 
